@@ -1,0 +1,51 @@
+<html>
+    <head>
+
+        <title>Parent</title>
+
+        <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon"/>
+
+        <script type="text/javascript">
+
+        //respond to events
+        window.addEventListener('message',
+          function(event) {
+
+          	if
+              (
+                  (event.origin == 'https://krantisolutionsinc.github.io/Child.html')
+                  ||
+                  (event.origin == 'https://krantisolutionsinc.github.io/Child.html/')
+              ) {
+                  console.log('message received:  ' + event.data,event);
+                  alert("Hello!");
+                	// window.location.href = "https://ksi-practice-box-authenticator.appspot.com";
+                } else {
+                  console.log("Invalid origin: " + event.origin);
+                  return;
+                }
+          },
+        false);
+
+        </script>
+
+    </head>
+    <body>
+        <iframe
+            src="https://krantisolutionsinc.github.io/Child.html"
+            style="
+                position: fixed;
+                top: 0px;
+                bottom: 0px;
+                right: 0px;
+                width: 100%;
+                border: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                z-index: 999999;
+                height: 100%;
+            ">
+        </iframe>
+    </body>
+</html>
