@@ -24,11 +24,16 @@
           },
         false);
 
+        function loadChildFrame() {
+            document.getElementById('AppFrame').src = document.getElementById('AppFrame').src;
+        }
+            
         </script>
         
     </head>
-    <body>
+    <body onLoad="loadChildFrame();">
         <iframe
+            id='AppFrame'
             src="https://ksi-practice-box-authenticator.appspot.com/"
             style="
                 position: fixed;
