@@ -12,22 +12,20 @@
           function(event) {
 
           	if
-              (
-                  (event.origin == 'https://ksi-practice-box-authenticator.appspot.com/')
-                  ||
-                  (event.origin == 'https://ksi-practice-box-authenticator.appspot.com')
-              ) {
-                  console.log('message received:  ' + event.data,event);
-                	window.location.href = "https://ksi-practice-box-authenticator.appspot.com";
-                } else {
-                  console.log("Invalid origin: " + event.origin);
+              (event.origin == 'https://ksi-practice-box-authenticator.appspot.com')
+              {
+                console.log('message received:  ' + event.data, event);
+                // alert("Hello!");
+                window.location.href = "https://ksi-practice-box-authenticator.appspot.com";
+              } else {
+                  alert("Invalid origin: " + event.origin);
                   return;
-                }
+              }
           },
         false);
 
         </script>
-
+        
     </head>
     <body>
         <iframe
