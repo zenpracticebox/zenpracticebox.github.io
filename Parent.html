@@ -1,7 +1,7 @@
 <html>
     <head>
 
-        <title>Parent</title>
+        <title>Parent 2.0</title>
 
         <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon"/>
 
@@ -12,18 +12,15 @@
           function(event) {
 
           	if
-              (
-                  (event.origin == 'https://krantisolutionsinc.github.io/Child.html')
-                  ||
-                  (event.origin == 'https://krantisolutionsinc.github.io/Child.html/')
-              ) {
-                  console.log('message received:  ' + event.data,event);
-                  alert("Hello!");
-                	// window.location.href = "https://ksi-practice-box-authenticator.appspot.com";
-                } else {
+              (event.origin == 'https://krantisolutionsinc.github.io')
+              {
+                console.log('message received:  ' + event.data, event);
+                alert("Hello!");
+                // window.location.href = "https://ksi-practice-box-authenticator.appspot.com";
+              } else {
                   console.log("Invalid origin: " + event.origin);
                   return;
-                }
+              }
           },
         false);
 
